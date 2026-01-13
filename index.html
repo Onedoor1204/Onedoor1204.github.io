@@ -55,7 +55,7 @@
             min-width: 80px;
             box-shadow: 2px 2px 0px #BDC3C7;
             opacity: 0;
-            transition: opacity 0.8s ease-in-out; /* 加快淡入速度 */
+            transition: opacity 0.8s ease-in-out;
         }
 
         .photo-layer { 
@@ -80,7 +80,7 @@
             height: 380px; 
             z-index: 2; 
             transform-origin: left; 
-            transition: transform 1.8s cubic-bezier(0.4, 0, 0.2, 1); /* 門開啟速度稍微加快 */
+            transition: transform 1.8s cubic-bezier(0.4, 0, 0.2, 1);
             backface-visibility: hidden; 
             border-radius: 18px; 
             border: 4px solid #455A64;
@@ -179,7 +179,7 @@
     };
 
     const memberNames = {
-        sungho: "성호", riwoo: "리우", jaehyun: "명재현", 
+        sungho: "성호", riwoo: "리우", jaehyun: "명재현",
         taesan: "태산", leehan: "이한", woonhak: "운학",
         sangsung: "상성즈", mungnyang: "멍냥즈", gumchi: "껌치즈",
         hois: "호이즈", nunnyang: "눈냥즈", hyukmyeong: "혁명즈",
@@ -244,13 +244,11 @@
             door.style.transition = "transform 1.8s cubic-bezier(0.4, 0, 0.2, 1)";
             door.classList.add('door-open');
             
-            // 加快時間：上方標籤 0.6 秒出現
             setTimeout(() => {
                 cardNameDisplay.innerText = memberNames[selectedMember.id];
                 cardNameDisplay.style.opacity = "1";
             }, 600);
 
-            // 加快時間：下方文字 1.0 秒出現
             setTimeout(() => {
                 nameDisplay.innerText = selectedMember.name;
                 drawBtn.disabled = false;
